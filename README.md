@@ -25,4 +25,10 @@
   8. `void`: use in functions as return type when you aren't returning a value.
   9. `never`
 ### Functions
-  Functions in TypeScript are always type safe. You must always specify parameter type with `<parameter name>: <parameter type>` and return type as `: <return type>`
+  Functions in TypeScript are always type safe. You must always specify parameter type with `<parameter name>: <parameter type>` and return type as `: <return type>`. There are 3 ways to define a function which are defined in `functions.ts`.
+### Optional parameters
+  Optional parameters are those parameter whose value may or may not be present. You can denote a parameter as optional by using `<par name>?`
+### Required parameters
+  These parameters take a required specific value. They can be defined using `<par name>: <par type> = <def value>`.
+### Rest parameters
+  Equivalent to `kwargs` or `args` in python. They are used to specify rest optional parameters and are always of array type. Defined using `...<rest par name>: <item type>[]`
