@@ -83,3 +83,29 @@
   3. Static methods
 ### Getters and Setters
   We use getters to access the value of private instance attributes and setters to set the value of private instance attributes. To define a getter we use the `get` and a setter using the `set` keyword.
+### Interfaces
+  Interfaces are used to define your own custom data type in TypeScript. To define an interface we use the `interface` keyword. In the definition of an interface we define the field name and the field type for each object. For example,
+  ```
+  interface User{
+      age: number,
+      name: string
+  }
+  ```
+  an interface can extend another by using the `extend` keyword. Just like classes this allows the other interface to access all attributes of the other one while adding its own.
+  ```
+  interface Admin extends User{
+      adminId: number
+  }
+  ```
+  Here `Admin` has attributes `age`, `name` and `adminId`.  
+  An interface can also define its functions, but it cannot implement those functions. Those functions are implemented by a class that implements the said interface. We can show that a class implements an interface using the `implements` keyword.  
+  If you want to use an interface in another file prefix its definition with the `export` keyword and in the file you are importing use `import {interface} from 'path-name'`.
+  >NOTE: During compilation of code interfaces disappear as interfaces are not a concept in JavaScript. So if you need to use your data type in the code do not use interfaces.
+### Object deconstruction
+  If you only want select properties of an object stored in certain variables use the following format.
+  ```
+  {prop-name1: var-name1, prop-name2: var-name2} = obj
+  ```
+  This way you can get the required properties in your variable names from the object.
+### Decorators
+  Decorators change the behaviour of a class or method. They are denoted by a `@` before the class or method definition.
