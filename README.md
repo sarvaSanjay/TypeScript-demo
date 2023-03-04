@@ -32,3 +32,54 @@
   These parameters take a required specific value. They can be defined using `<par name>: <par type> = <def value>`.
 ### Rest parameters
   Equivalent to `kwargs` or `args` in python. They are used to specify rest optional parameters and are always of array type. Defined using `...<rest par name>: <item type>[]`
+### Classes
+  Syntax for defining classes is given in `class.ts`. To define a class use the `class` keyword.  
+  ```
+  class <ClassName>{
+      <fieldName>: <field-type>
+      ...
+  }
+  ```
+  When defining the field attributes mention the data type.
+### Constructors in TypeScript
+  As in JavaScript, the default method name for creating a constructor for a class in TypeScript is `constructor` method. Important thing to note is that you can create only 1 constructor in TypeScript and hence you can create either a default constructor or a parametrised constructor.
+  ```
+  class <ClassName>{
+      <fieldName>: <field-type>
+      ...
+      constructor(<parName>: <par-type>){
+          this.<fieldName> = <parName>
+      }
+  }
+  ```
+  When referring to an object inside the class always use `this` keyword to accesss any functions / instance attributes.
+### Creating an object
+  We create a new object using the `new` keyword. The exact syntax is
+  ```
+  let <objName> = new <ClassName>(arguements)
+  ```
+### Creating a private attribute
+  We mark an attribute of a class as private by prefixing it with a `#`. For example,
+  ```
+  #password : string
+  ```
+  Any private attribute cannot be accessed outside the class.
+### Creating a protected attribute
+  A protected attribute can be accessed by members of a class and its sub-classes but not outside in the interface. We mark an attribute as protected by using the `protected` keyword.
+### Static methods
+  A static method is a method that does not belong to an object but rather belongs to the class itself. We define a static method using the `static` keyword and access it outside the class using `<ClassName>.<staticmethodname>`.
+### Inheritance
+  Inheritance is when one class inherits or uses the functions and attributes of another class. The class that inherits the attributes is called the *subclass* while the one that provides them is called the *superclass*. We implement inheritance in TypeScript using the `extends` keyword. To call the superclass' constructor within the subclass by using the `super()` keyword. The syntax is:
+  ```
+  class <SubClass> extends <SuperClass>{
+      constructor(parName: <par-type>){
+          super(parName)
+      }
+  }
+  ```
+  A subclass can access the following properties of the superclass:
+  1. The protected and public instance attributes
+  2. The protected and public functions
+  3. Static methods
+### Getters and Setters
+  We use getters to access the value of private instance attributes and setters to set the value of private instance attributes. To define a getter we use the `get` and a setter using the `set` keyword.
