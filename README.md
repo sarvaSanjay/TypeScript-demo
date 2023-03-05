@@ -125,3 +125,19 @@
 9. `angular.json` has details about all projects in current folder. If you create more projects in same folder it will be updated.
 10. `src` folder contains all source code. It is where you will write your code for the app.
 11. `node_modules` contains all important packages that have been installed for your app to run.
+## The src folder: where the magic happens
+  As mentioned before the `src` folder is where we write all of our code. Lets explore its components.
+### styles.sass
+  It is your stylesheet file. You write any CSS-style configurations here.
+### main.ts
+  The file that is executed when you run your app.
+### index.html
+  The html file that is rendered when you run your app.
+### favicon.ico
+  Just an icon that is present on every app.
+### assets
+  Where you keep all your resources like images etc.
+### app
+  Here is where you have all your app components. This is where you write the code for your app. The `app-routing.module.ts` handles routing. The `app.component.html` file is where you write HTML code for each app component while the `app.component.sass` file is where you write CSS. `app.component.spec.ts` is where you write tests for the code you write in `app.component.ts`.
+## Mono-repo
+  In angular you can create and deploy multiple projects from a single workspace. This allows you to share libraries between various applications. This concept is called *mono-repo*.
