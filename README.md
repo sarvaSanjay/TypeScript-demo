@@ -109,3 +109,19 @@
   This way you can get the required properties in your variable names from the object.
 ### Decorators
   Decorators change the behaviour of a class or method. They are denoted by a `@` before the class or method definition.
+## Angular setup
+1. Install the angular cli using the command `npm i -g @angular/cli`.
+2. Check angular version using `ng version`.
+3. Create an application using the command `ng new hotelappinventory`.
+## Workspace walkthrough
+1. `tsconfig.json` is the configuration file that describes general file compilation rules from TypeScript to JavaScript
+2. `tsconfig.spec.json` has rules for compiling all unit test files from TypeScript to JavaScript. All test files must end with `.spec.ts`. It extends the `tsconfig.json` file.
+3. `tsconfig.app.json` has rules for compiling all app related files. It extends the `tsconfig.json` file.
+4. `README.md` is pretty self explanatory.
+5. `package.json` describes the commands you need to run, test or build your app which is in the `script` part of the file, It also describes the dependencies required to run your app. The dependencies needed exclusively to develop and test your app are in `devdependencies` while the rest are in `dependencies`.
+6. `package-lock.json` is for CI and is useful when working with big teams. For solo-projects ignore.
+7. `.gitignore` tells which files should not be checked-in.
+8. `.editorconfig` has guidelines regarding changing from one editor to another. Do not worry about this one.
+9. `angular.json` has details about all projects in current folder. If you create more projects in same folder it will be updated.
+10. `src` folder contains all source code. It is where you will write your code for the app.
+11. `node_modules` contains all important packages that have been installed for your app to run.
