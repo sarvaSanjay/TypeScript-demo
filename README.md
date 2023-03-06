@@ -172,6 +172,16 @@
   2. Property Binding
   3. Event Binding
 ### Interpolation
-  Interpolation is when you directly use a variable from TypeScript in your inline HTML code.
+  Interpolation is when you directly use a variable from TypeScript in your inline HTML code. Define the variable in your `component.ts` file and refer to it in an in-text format by using double curly-braces i.e. `{{<varName>}}`
 ### Property Binding
-  Property Binding is when you connect a property of an HTML tag to a variable in TypeScript component
+  Property Binding is when you connect a property of an HTML tag to a variable in TypeScript component. Define the variable in your `component.ts` file and refer to it in HTML code using the following syntax:
+  ```
+  <tag-name [propertyName] = 'varName'> </tag-name>
+  ```
+  Do not forget to place the `propertyName` within the `[]` and the variable name within `''` 
+### Event Binding
+  Event binding links events such as `click` to functions in TypeScript component. Define the variable in your `component.ts` file and refer to it in HTML code using the following syntax:
+  ```
+  <tag-name (eventName) = 'functionName()'> </tag-name>
+  ```
+  Do not forget to place the `eventName` within the `()` and the variable name within `''` 
