@@ -141,3 +141,17 @@
   Here is where you have all your app components. This is where you write the code for your app. The `app-routing.module.ts` handles routing. The `app.component.html` file is where you write HTML code for each app component while the `app.component.sass` file is where you write CSS. `app.component.spec.ts` is where you write tests for the code you write in `app.component.ts`.
 ## Mono-repo
   In angular you can create and deploy multiple projects from a single workspace. This allows you to share libraries between various applications. This concept is called *mono-repo*.
+## Components
+  Components are the views that shall be displayed in your app. They are defined as classes in Angular and are multiple reusable HTML tags. The main component in an app is the `AppComponent`. It is the one that is run when you run your app. It is defined as the `app-root`.  
+  All components must be declared in the `app.module.ts` file. Every component must be defined in the `app.component.ts` file using the `@Component` decorator. The following parameters must be mentioned in the decorator.
+  ```
+  @Component({
+    selector: <selector-name>,
+    templateUrl: <path-for-html-file>,
+    styleUrls: [<list-of-css-urls>]
+  })
+  ```
+## Watch loading
+  Watch loading is a concept which states that any changes made are recorded while compilation.
+## Angular Language Service
+  It is a VScode extension that provides intelligent features to angular. 
