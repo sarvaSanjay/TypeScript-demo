@@ -184,4 +184,30 @@
   ```
   <tag-name (eventName) = 'functionName()'> </tag-name>
   ```
-  Do not forget to place the `eventName` within the `()` and the variable name within `''` 
+  Do not forget to place the `eventName` within the `()` and the variable name within `''`
+## Directives
+  Directives are classes which can change the behavior of elements and components. There are two types of directives
+  1. Structural directives: They can manipulate DOM behaviour. They are used in the `component.html` file.
+  2. Attribute directives: They can only change style features aka appearance.
+## Built in directives
+  Angular provides certain built in directives which are very useful in changing the behavior of elements. Built in directives that are structural are marked using an asterisk (\*). Let us look at some built in directives.
+### *ngIf
+  `*ngIf` is a directive that is equivalent to an `if` statement in angular. The syntax for it is:
+  ```
+  <div *ngIf='condition'>
+    Your code
+  </div>
+  ```
+### *ngFor
+  `*ngFor` is used when you want to loop over a certain array in order to obtain each object or value. Hence it is very much like a `for` statement in TypeScript. The syntax for it is:
+  ```
+  <div *ngFor='let loopVar of arrayVar'>
+    Code that needs to be repeated
+  </div>
+  ```
+  Hence a `div` element shall be created for each elemt in `arrayVar`. This is very useful for creating multiple blocks of HTML code at once. We can also access index of the array in the following way:
+  ```
+  <div *ngFor='let loopVar of arrayVar'; let i=index>
+    Code that needs to be repeated
+  </div>
+  ```

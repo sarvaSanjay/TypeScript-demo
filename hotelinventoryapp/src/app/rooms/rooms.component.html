@@ -5,4 +5,22 @@
     </div>
     <div [innerText] = 'numberRooms'></div>
 </div>
+{{rooms.availableRooms ? '':'No Rooms'}}
+<div *ngIf='rooms.availableRooms > 0'>
+    Rooms List:
+    <table>
+        <tr>
+            <th>Room Type</th>
+            <th>Price</th>
+            <th>Amenities</th>
+            <th>Checkin Time</th>
+        </tr>
+        <tr *ngFor='let room of roomsList'>
+            <td>{{room.roomType}}</td>
+            <td>{{room.price}}</td>
+            <td>{{room.amenities}}</td>
+            <td>{{room.checkInTime}}</td>
+        </tr>
+    </table>
+</div>
 <button (click) = 'toggle()'>Toggle</button>
