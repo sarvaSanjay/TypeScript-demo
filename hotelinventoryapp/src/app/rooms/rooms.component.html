@@ -15,7 +15,8 @@
             <th>Amenities</th>
             <th>Checkin Time</th>
         </tr>
-        <tr *ngFor='let room of roomsList'>
+        <tr *ngFor='let room of roomsList; let i=index'
+        [ngClass]='i % 2 == 0 ? "even": "odd"'>
             <td>{{room.roomType}}</td>
             <td>{{room.price}}</td>
             <td>{{room.amenities}}</td>

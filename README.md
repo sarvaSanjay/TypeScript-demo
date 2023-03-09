@@ -234,3 +234,11 @@
   ```
   Always remember to place the value of the `varName` in single quotes `''` surrounded by double quotes `""` in order for angular to treat it as a string. If you do not do this then angular will treat it as a variable.  
   Also do not forget to place `ngSwitch` in square brackets.
+### ngClass
+  It allows you to change the CSS class of a component. The format to use this directive is:
+  ```
+  <div [ngClass] = "whatever code you want to put for the class">
+    <div></div>     
+  </div>
+  ```
+  The `class` of the inner `divs` are changed if we are working with a loop variable. Do not forget to add the `ngClass` attribute within square brackets `[]`.
