@@ -211,3 +211,26 @@
     Code that needs to be repeated
   </div>
   ```
+### ngSwitch
+  This allows you to use `switch` case statements in your html code. Each case can be denoted using `*ngSwitchCase`. The following template should be followed:
+  ```
+  <div [ngSwitch]="varName">
+    <div *ngSwitchCase="'val1'"> 
+      Case 1 code
+    </div>
+    <div *ngSwitchCase="'val2'">
+      Case 2 code
+    </div>
+    <div *ngSwitchCase="'val3'">
+      Case 3 code
+    </div>
+    .
+    .
+    .
+    <div *ngSwitchDefault>
+      Default case code
+    </div>
+  </div>
+  ```
+  Always remember to place the value of the `varName` in single quotes `''` surrounded by double quotes `""` in order for angular to treat it as a string. If you do not do this then angular will treat it as a variable.  
+  Also do not forget to place `ngSwitch` in square brackets.
