@@ -242,3 +242,9 @@
   </div>
   ```
   The `class` of the inner `divs` are changed if we are working with a loop variable. Do not forget to add the `ngClass` attribute within square brackets `[]`.
+### ngStyle
+  It allows you to physically insert inline style attributes into the HTML page. The following format should be followed:
+  ```
+  <div [ngStyle] = "whatever condition based CSS code you want">    
+  </div>
+  ```
