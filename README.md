@@ -248,3 +248,23 @@
   <div [ngStyle] = "whatever condition based CSS code you want">    
   </div>
   ```
+## Pipes
+  Pipes are used for data transformation. They do not change the actual object but they only change the way they are presented to the user.
+### Built in pipes
+  They are certain built in pipes that are useful for simple transformations that are needed frequently. They are
+  1. DatePipe - It is used to format the date from the default long date format to another simpler one. Example use case:
+  ```
+  {{rooms.checkInTime | date : 'format-optional'}}
+  ```
+  2. UpperCasePipe - It is used to format into uppercase. Similarly you have LowerCasePipe and TitleCasePipe
+  ```
+  {{rooms.amenities | UpperCase }}
+  ```
+  3. CurrencyPipe - Used to format currency. Default currency is $ so if you want another you must specify.
+  ```
+  {{rooms.price | currency: 'INR'}}
+  ```
+  4. JsonPipe - used to convert arrays and objects into JSON format. Useful for debugging only.
+  ```
+  {{rooms.availableRooms | json}}
+  ```

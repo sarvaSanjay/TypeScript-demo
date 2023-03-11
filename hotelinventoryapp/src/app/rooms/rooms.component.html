@@ -18,9 +18,9 @@
         <tr *ngFor='let room of roomsList; let i=index'
         [ngClass]='i % 2 == 0 ? "even": "odd"'>
             <td>{{room.roomType}}</td>
-            <td>{{room.price}}</td>
+            <td>{{room.price | currency: 'CAD'}}</td>
             <td>{{room.amenities}}</td>
-            <td>{{room.checkInTime}}</td>
+            <td>{{room.checkInTime | date: 'dd/MMM/yyyy'}}</td>
         </tr>
     </table>
 </div>
